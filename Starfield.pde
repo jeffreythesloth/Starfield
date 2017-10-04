@@ -35,6 +35,8 @@ class Normal implements Particle
   {
     dX = dX + Math.cos(dTheta)*dSpeed;
     dY = dY + Math.sin(dTheta)*dSpeed;
+    if (dX > 300 || dY > 300)
+      dX = dY = 150;
   }
   public void show()
   {
@@ -59,6 +61,8 @@ class Oddball implements Particle
   {
     dX = dX + Math.cos(dTheta)*dSpeed;
     dY = dY + Math.sin(dTheta)*dSpeed;
+    if (dX > 300 || dY > 300)
+      dX = dY = 150;
   }
   public void show()
   {
@@ -84,4 +88,3 @@ class Jumbo extends Normal
     ellipse((float)dX,(float)dY,30,30);
   }
 }
-

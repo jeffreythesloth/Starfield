@@ -35,7 +35,7 @@ class Normal implements Particle
   {
     dX = dX + Math.cos(dTheta)*dSpeed;
     dY = dY + Math.sin(dTheta)*dSpeed;
-    if (dX > 300 || dY > 300)
+    if (dX < 0 || dX > 300 || dY < 0 || dY > 300)
       dX = dY = 150;
   }
   public void show()
@@ -61,7 +61,7 @@ class Oddball implements Particle
   {
     dX = dX + Math.cos(dTheta)*dSpeed;
     dY = dY + Math.sin(dTheta)*dSpeed;
-    if (dX > 300 || dY > 300)
+    if (dX < 0 || dX > 300 || dY < 0 || dY > 300)
       dX = dY = 150;
   }
   public void show()
